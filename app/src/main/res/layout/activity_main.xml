@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!-- Input untuk Jari-jari Tabung -->
+    <EditText
+        android:id="@+id/inputRadius"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Masukkan jari-jari"
+        android:inputType="numberDecimal"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="16dp" />
+
+    <!-- Input untuk Tinggi Tabung -->
+    <EditText
+        android:id="@+id/inputHeight"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Masukkan tinggi"
+        android:inputType="numberDecimal"
+        app:layout_constraintTop_toBottomOf="@id/inputRadius"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="16dp" />
+
+    <!-- Tombol untuk Menghitung Volume -->
+    <Button
+        android:id="@+id/btnCalculateVolume"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Hitung Volume"
+        app:layout_constraintTop_toBottomOf="@id/inputHeight"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="16dp" />
+
+    <!-- Tombol untuk Menghitung Luas Permukaan -->
+    <Button
+        android:id="@+id/btnCalculateArea"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Hitung Luas Permukaan"
+        app:layout_constraintTop_toBottomOf="@id/btnCalculateVolume"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="16dp" />
+
+    <!-- Output Hasil Perhitungan -->
+    <TextView
+        android:id="@+id/outputResult"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:gravity="center"
+        android:padding="16dp"
+        app:layout_constraintTop_toBottomOf="@id/btnCalculateArea"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="16dp"
+        android:text="Hasil akan ditampilkan di sini" />
+</androidx.constraintlayout.widget.ConstraintLayout>
